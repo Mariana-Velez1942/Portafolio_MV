@@ -1,134 +1,63 @@
-:root {
-    --sand-dollar: #DDD0C8;
-    --alabaster: #EDEAE0;
-    --sticks-stones: #6E6259;
-    --natural-linen: #A99C94;
-    --rockweed: #3F3C3C;
-  }
 
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--alabaster);
-    color: var(--rockweed);
-  }
-
-  header {
-    background-color: var(--sand-dollar);
-    padding: 60px 20px 40px;
-    text-align: center;
-    border-bottom: 1px solid var(--natural-linen);
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 3em;
-    color: var(--sticks-stones);
-  }
-
-  header p {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: var(--rockweed);
-  }
-
- 
-
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 60px 20px;
-    flex: 1;
-  }
-
-  .card {
-    background-color: var(--sand-dollar);
-    border-radius: 15px;
-    width: 280px;
-    padding: 30px 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .card h2 {
-    color: var(--sticks-stones);
-    font-size: 1.4em;
-    margin-bottom: 15px;
-  }
-
-  .card p {
-    font-size: 0.95em;
-    color: var(--rockweed);
-    margin-bottom: 25px;
-  }
-
-  .btn {
-    background-color: var(--sticks-stones);
-    color: var(--alabaster);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: var(--rockweed);
-  }
-
-  footer {
-    text-align: center;
-    padding: 80px 40px;
-    background-color: var(--sticks-stones);
-    color: var(--alabaster);
-    font-size: 0.9em;
-  }
-
-/* --- Menú horizontal --- */
-nav {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #e1bee7);
+  color: #4a0057;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-nav a {
-  color: var(--alabaster);
-  background-color: var(--natural-linen);
+a {
   text-decoration: none;
-  margin: 0 10px;
+  color: inherit;
+}
+
+
+.navbar {
+  background-color: #f5c1f9;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  font-weight: bold;
+  color: #4a0057;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+
+.btn-pastel {
+  background: #e1bee7;
+  color: #4a0057;
+  border: none;
+  border-radius: 20px;
   padding: 10px 20px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav a:hover {
-  background-color: var(--sand-dollar);
-  color: var(--rockweed);
+.btn-pastel:hover {
+  background: #ce93d8;
+  color: #fff;
 }
 
-/* --- Tarjetas de proyectos --- */
 .project-card {
-  background-color: var(--sand-dollar);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
+  background: #fff0f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
   transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -137,14 +66,20 @@ nav a:hover {
 
 .project-card img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  height: 160px;
+  object-fit: cover;
 }
 
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.project-card .card-body {
+  padding: 1rem;
+}
+
+footer {
+  background-color: #fce4ec;
+  padding: 1rem;
+  text-align: center;
+  color: #6a1b9a;
+  font-size: 14px;
+  margin-top: auto;
 }
 
